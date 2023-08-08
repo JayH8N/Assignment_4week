@@ -18,6 +18,7 @@
 		7878771A2A820E0000DE8D7C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 787877192A820E0000DE8D7C /* SwiftyJSON */; };
 		7878771D2A820E0E00DE8D7C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7878771C2A820E0E00DE8D7C /* Alamofire */; };
 		787877202A820E1900DE8D7C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7878771F2A820E1900DE8D7C /* Kingfisher */; };
+		787877222A82132E00DE8D7C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787877212A82132D00DE8D7C /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		7878770D2A820ABD00DE8D7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		787877142A820B3C00DE8D7C /* Lottery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lottery.storyboard; sourceTree = "<group>"; };
 		787877162A820B4700DE8D7C /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
+		787877212A82132D00DE8D7C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				787877082A820ABD00DE8D7C /* Assets.xcassets */,
 				7878770A2A820ABD00DE8D7C /* LaunchScreen.storyboard */,
 				7878770D2A820ABD00DE8D7C /* Info.plist */,
+				787877212A82132D00DE8D7C /* Extension.swift */,
 			);
 			path = Assignment_4week;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				787877222A82132E00DE8D7C /* Extension.swift in Sources */,
 				787877042A820ABC00DE8D7C /* ViewController.swift in Sources */,
 				787877172A820B4700DE8D7C /* LottoViewController.swift in Sources */,
 				787877002A820ABC00DE8D7C /* AppDelegate.swift in Sources */,

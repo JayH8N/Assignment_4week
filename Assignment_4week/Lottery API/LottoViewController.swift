@@ -14,10 +14,13 @@ class LottoViewController: UIViewController {
     
     
     
+    @IBOutlet var numberLabel: UITextField!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setMain()
         let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=1079"
         AF.request(url, method: .get).validate().responseJSON { response in
             switch response.result {
@@ -29,6 +32,12 @@ class LottoViewController: UIViewController {
             }
         }
         
+    }
+    
+    func setMain() {
+        numberLabel.layer.borderColor = UIColor.black.cgColor
+        numberLabel.layer.borderWidth = 3
+        numberLabel.layer.cornerRadius = 5
     }
     
     

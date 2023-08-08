@@ -16,13 +16,31 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xXp-2z-flr">
+                                <rect key="frame" x="40" y="119" width="313" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="xvV-RB-Xzb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xXp-2z-flr" secondAttribute="trailing" constant="40" id="4fg-M7-77U"/>
+                            <constraint firstItem="xXp-2z-flr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="Q1z-fL-dgE"/>
+                            <constraint firstItem="xXp-2z-flr" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="Thj-U7-dlY"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="numberLabel" destination="xXp-2z-flr" id="4LR-kJ-0DM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="532" y="193"/>
+            <point key="canvasLocation" x="530.53435114503816" y="192.95774647887325"/>
         </scene>
     </scenes>
     <resources>
