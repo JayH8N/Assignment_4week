@@ -13,6 +13,11 @@
 		787877072A820ABC00DE8D7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787877052A820ABC00DE8D7C /* Main.storyboard */; };
 		787877092A820ABD00DE8D7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787877082A820ABD00DE8D7C /* Assets.xcassets */; };
 		7878770C2A820ABD00DE8D7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7878770A2A820ABD00DE8D7C /* LaunchScreen.storyboard */; };
+		787877152A820B3C00DE8D7C /* Lottery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787877142A820B3C00DE8D7C /* Lottery.storyboard */; };
+		787877172A820B4700DE8D7C /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787877162A820B4700DE8D7C /* LottoViewController.swift */; };
+		7878771A2A820E0000DE8D7C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 787877192A820E0000DE8D7C /* SwiftyJSON */; };
+		7878771D2A820E0E00DE8D7C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7878771C2A820E0E00DE8D7C /* Alamofire */; };
+		787877202A820E1900DE8D7C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7878771F2A820E1900DE8D7C /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,8 @@
 		787877082A820ABD00DE8D7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7878770B2A820ABD00DE8D7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7878770D2A820ABD00DE8D7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		787877142A820B3C00DE8D7C /* Lottery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lottery.storyboard; sourceTree = "<group>"; };
+		787877162A820B4700DE8D7C /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				787877202A820E1900DE8D7C /* Kingfisher in Frameworks */,
+				7878771A2A820E0000DE8D7C /* SwiftyJSON in Frameworks */,
+				7878771D2A820E0E00DE8D7C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +66,7 @@
 		787876FE2A820ABC00DE8D7C /* Assignment_4week */ = {
 			isa = PBXGroup;
 			children = (
+				787877132A820B0700DE8D7C /* Lottery API */,
 				787876FF2A820ABC00DE8D7C /* AppDelegate.swift */,
 				787877012A820ABC00DE8D7C /* SceneDelegate.swift */,
 				787877032A820ABC00DE8D7C /* ViewController.swift */,
@@ -65,6 +76,15 @@
 				7878770D2A820ABD00DE8D7C /* Info.plist */,
 			);
 			path = Assignment_4week;
+			sourceTree = "<group>";
+		};
+		787877132A820B0700DE8D7C /* Lottery API */ = {
+			isa = PBXGroup;
+			children = (
+				787877142A820B3C00DE8D7C /* Lottery.storyboard */,
+				787877162A820B4700DE8D7C /* LottoViewController.swift */,
+			);
+			path = "Lottery API";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +103,11 @@
 			dependencies = (
 			);
 			name = Assignment_4week;
+			packageProductDependencies = (
+				787877192A820E0000DE8D7C /* SwiftyJSON */,
+				7878771C2A820E0E00DE8D7C /* Alamofire */,
+				7878771F2A820E1900DE8D7C /* Kingfisher */,
+			);
 			productName = Assignment_4week;
 			productReference = 787876FC2A820ABC00DE8D7C /* Assignment_4week.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +136,11 @@
 				Base,
 			);
 			mainGroup = 787876F32A820ABC00DE8D7C;
+			packageReferences = (
+				787877182A820E0000DE8D7C /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				7878771B2A820E0E00DE8D7C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				7878771E2A820E1900DE8D7C /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 787876FD2A820ABC00DE8D7C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				787877152A820B3C00DE8D7C /* Lottery.storyboard in Resources */,
 				7878770C2A820ABD00DE8D7C /* LaunchScreen.storyboard in Resources */,
 				787877092A820ABD00DE8D7C /* Assets.xcassets in Resources */,
 				787877072A820ABC00DE8D7C /* Main.storyboard in Resources */,
@@ -139,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				787877042A820ABC00DE8D7C /* ViewController.swift in Sources */,
+				787877172A820B4700DE8D7C /* LottoViewController.swift in Sources */,
 				787877002A820ABC00DE8D7C /* AppDelegate.swift in Sources */,
 				787877022A820ABC00DE8D7C /* SceneDelegate.swift in Sources */,
 			);
@@ -293,8 +325,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +335,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.junghoon.Assignment-4week";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,8 +357,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +367,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.junghoon.Assignment-4week";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +398,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		787877182A820E0000DE8D7C /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		7878771B2A820E0E00DE8D7C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		7878771E2A820E1900DE8D7C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		787877192A820E0000DE8D7C /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 787877182A820E0000DE8D7C /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		7878771C2A820E0E00DE8D7C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7878771B2A820E0E00DE8D7C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		7878771F2A820E1900DE8D7C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7878771E2A820E1900DE8D7C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 787876F42A820ABC00DE8D7C /* Project object */;
 }
