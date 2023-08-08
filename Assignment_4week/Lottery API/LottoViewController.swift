@@ -9,63 +9,103 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 
-class LottoViewController: UIViewController {
+class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    
-    
-    
     @IBOutlet var numberLabel: UITextField!
+    @IBOutlet var winnerNumber: UILabel!
+    @IBOutlet var image: UIImageView!
+    @IBOutlet var bonusNumber: UILabel!
+    @IBOutlet var dateLabel: UILabel!
     
+    var list: [Int] = Array(1...1066).reversed()
     
+    let pickerView = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setMain()
-        let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=1079"
+        callRequest(number: 1066)
+        numberLabel.inputView = pickerView //텍스트필드 누르면 피커뷰 뜬다.
+        numberLabel.tintColor = .clear //텍스트필드 커서 깜빡거림
+        
+        pickerView.delegate = self
+        pickerView.dataSource = self
+    }
+    
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//
+//    }
+    
+    func callRequest(number: Int) {
+        let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(number)"
         AF.request(url, method: .get).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
+                let date = json["drwNoDate"].stringValue
+                
+                let bonusNumber = json["bnusNo"].intValue
+                
+                let num1 = json["drwtNo1"]
+                let num2 = json["drwtNo2"]
+                let num3 = json["drwtNo3"]
+                let num4 = json["drwtNo4"]
+                let num5 = json["drwtNo5"]
+                let num6 = json["drwtNo6"]
+                
+                self.winnerNumber.text = "\(num1)  \(num2)  \(num3)  \(num4)  \(num5)  \(num6)"
+                self.dateLabel.text = date
+                self.bonusNumber.text = "\(bonusNumber)"
+                
                 print("JSON: \(json)")
             case .failure(let error):
                 print(error)
             }
         }
-        
     }
     
     func setMain() {
-        numberLabel.layer.borderColor = UIColor.black.cgColor
-        numberLabel.layer.borderWidth = 3
+        numberLabel.layer.addBorder([.bottom], width: 3, color: UIColor.systemPink.cgColor)
         numberLabel.layer.cornerRadius = 5
+        numberLabel.layer.borderColor = UIColor.systemPink.cgColor
+        numberLabel.layer.borderWidth = 1
+        numberLabel.font = UIFont.boldSystemFont(ofSize: 25)
+        numberLabel.textAlignment = .center
+        image.image = UIImage(systemName: "plus.circle.fill")
+        image.tintColor = .systemPink
+        dateLabel.font = UIFont.systemFont(ofSize: 14)
+        winnerNumber.layer.addBorder([.bottom], width: 1, color: UIColor.lightGray.cgColor)
+        winnerNumber.textAlignment = .center
+        bonusNumber.layer.borderWidth = 5
+        bonusNumber.layer.cornerRadius = 10
+        bonusNumber.layer.borderColor = UIColor.systemPink.cgColor
+        bonusNumber.textAlignment = .center
+        dateLabel.textAlignment = .center
+        dateLabel.font = UIFont.boldSystemFont(ofSize: 14)
     }
     
     
-    
-    
-    
-    
-    
-}
-
-
-extension UIViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        <#code#>
+        return 1
     }
-    
+
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        <#code#>
+        return list.count
     }
-    
+
     public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        <#code#>
+        return "\(list[row])"
     }
-    
+
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        <#code#>
+        numberLabel.text = "\(list[row])"
+        callRequest(number: list[row])
     }
+
+    
+    
     
     
 }
