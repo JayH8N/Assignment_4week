@@ -11,6 +11,7 @@ import Alamofire
 
 class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    @IBOutlet var lottoImage: UIImageView!
     @IBOutlet var numberLabel: UITextField!
     @IBOutlet var winnerNumber: UILabel!
     @IBOutlet var image: UIImageView!
@@ -19,26 +20,24 @@ class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet var firstWinamnt: UILabel!
     
     
-    
-    var list: [Int] = Array(1...1066).reversed()
+    let last = 1079
+    var list: [Int] = Array(1...1079).reversed()
     
     let pickerView = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTitle()
         setMain()
-        callRequest(number: 1066)
+        callRequest(number: last)
+        numberLabel.text = "\(last)회"
+        
         numberLabel.inputView = pickerView //텍스트필드 누르면 피커뷰 뜬다.
         numberLabel.tintColor = .clear //텍스트필드 커서 깜빡거림
         
         pickerView.delegate = self
         pickerView.dataSource = self
     }
-    
-    
-//    override func viewDidAppear(_ animated: Bool) {
-//
-//    }
     
     func callRequest(number: Int) {
         let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(number)"
@@ -74,6 +73,13 @@ class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         }
     }
     
+    func setTitle() {
+        self.title = "-----인 · 생 · 한 · 방-----"
+        self.navigationController?.navigationBar.backgroundColor = .black
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: getRandomColor()]
+    }
+    
+    
     //돈단위 함수
     func decimalWon(value: Int) -> String{
             let numberFormatter = NumberFormatter()
@@ -82,6 +88,29 @@ class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             
             return result
         }
+    
+    func getRandomColor() -> UIColor{
+            
+            let randomRed:CGFloat = CGFloat(drand48())
+            
+            let randomGreen:CGFloat = CGFloat(drand48())
+            
+            let randomBlue:CGFloat = CGFloat(drand48())
+            
+            return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
+        }
+    
+    func getRandomColor1() {
+        let red   = CGFloat((arc4random() % 256)) / 255.0
+        let green = CGFloat((arc4random() % 256)) / 255.0
+        let blue  = CGFloat((arc4random() % 256)) / 255.0
+        let alpha = CGFloat(1.0)
+
+        UIView.animate(withDuration: 1.0, delay: 0.0, options:[.repeat, .autoreverse], animations: {
+            self.view.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: alpha)
+        }, completion:nil)
+    }
+
     
     func setMain() {
         numberLabel.layer.addBorder([.bottom], width: 3, color: UIColor.systemPink.cgColor)
@@ -102,8 +131,16 @@ class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         dateLabel.textAlignment = .center
         dateLabel.font = UIFont.boldSystemFont(ofSize: 14)
         firstWinamnt.textAlignment = .center
+        let imageUrl = URL(string: "https://storage.cobak.co/uploads/1535087318434001_faa9ab3abf.jpeg")
+        lottoImage.load(url: imageUrl!)
+        lottoImage.contentMode = .scaleToFill
+        
+        
     }
     
+    @IBAction func tapGeusture(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
     
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -119,7 +156,7 @@ class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
 
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        numberLabel.text = "\(list[row])"
+        numberLabel.text = "\(list[row])회"
         callRequest(number: list[row])
     }
 
