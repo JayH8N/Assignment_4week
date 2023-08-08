@@ -58,12 +58,12 @@ class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
                 let num5 = json["drwtNo5"]
                 let num6 = json["drwtNo6"]
                 //
-                let firstWinamnt = json["firstWinamnt"]
+                let firstWinamnt = json["firstWinamnt"].intValue
                 
                 self.winnerNumber.text = "\(num1)  \(num2)  \(num3)  \(num4)  \(num5)  \(num6)"
                 self.dateLabel.text = date
                 self.bonusNumber.text = "\(bonusNumber)"
-                let money = self.decimalWon(value: firstWinamnt.rawValue as! Int)
+                let money = self.decimalWon(value: firstWinamnt)
                 self.firstWinamnt.text = "1등 당첨금 : \(money)"
                 
                 
