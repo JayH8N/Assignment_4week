@@ -16,6 +16,9 @@ class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet var image: UIImageView!
     @IBOutlet var bonusNumber: UILabel!
     @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var firstWinamnt: UILabel!
+    
+    
     
     var list: [Int] = Array(1...1066).reversed()
     
@@ -43,20 +46,26 @@ class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
+                //
                 let date = json["drwNoDate"].stringValue
-                
+                //
                 let bonusNumber = json["bnusNo"].intValue
-                
+                //
                 let num1 = json["drwtNo1"]
                 let num2 = json["drwtNo2"]
                 let num3 = json["drwtNo3"]
                 let num4 = json["drwtNo4"]
                 let num5 = json["drwtNo5"]
                 let num6 = json["drwtNo6"]
+                //
+                let firstWinamnt = json["firstWinamnt"]
                 
                 self.winnerNumber.text = "\(num1)  \(num2)  \(num3)  \(num4)  \(num5)  \(num6)"
                 self.dateLabel.text = date
                 self.bonusNumber.text = "\(bonusNumber)"
+                let money = self.decimalWon(value: firstWinamnt.rawValue as! Int)
+                self.firstWinamnt.text = "1등 당첨금 : \(money)"
+                
                 
                 print("JSON: \(json)")
             case .failure(let error):
@@ -64,6 +73,15 @@ class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             }
         }
     }
+    
+    //돈단위 함수
+    func decimalWon(value: Int) -> String{
+            let numberFormatter = NumberFormatter()
+            numberFormatter.numberStyle = .decimal
+            let result = numberFormatter.string(from: NSNumber(value: value))! + "원"
+            
+            return result
+        }
     
     func setMain() {
         numberLabel.layer.addBorder([.bottom], width: 3, color: UIColor.systemPink.cgColor)
@@ -83,6 +101,7 @@ class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         bonusNumber.textAlignment = .center
         dateLabel.textAlignment = .center
         dateLabel.font = UIFont.boldSystemFont(ofSize: 14)
+        firstWinamnt.textAlignment = .center
     }
     
     

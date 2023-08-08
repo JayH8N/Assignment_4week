@@ -64,22 +64,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TvI-8U-Bbs">
+                                <rect key="frame" x="40" y="384" width="313" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QAB-8S-jOo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sXb-Qc-QkY" firstAttribute="top" secondItem="4kT-4U-2iD" secondAttribute="bottom" constant="62" id="721-1j-rlh"/>
+                            <constraint firstItem="TvI-8U-Bbs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="7Mu-Zt-JQS"/>
                             <constraint firstItem="4kT-4U-2iD" firstAttribute="top" secondItem="xXp-2z-flr" secondAttribute="bottom" constant="28" id="EEJ-yR-49E"/>
                             <constraint firstItem="4kT-4U-2iD" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Hui-Yl-Vmg"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sXb-Qc-QkY" secondAttribute="trailing" constant="30" id="Rxg-fB-Rrt"/>
                             <constraint firstItem="xXp-2z-flr" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="Thj-U7-dlY"/>
                             <constraint firstItem="sXb-Qc-QkY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="gvS-rK-PAE"/>
                             <constraint firstItem="xXp-2z-flr" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ikv-1F-Uep"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TvI-8U-Bbs" secondAttribute="trailing" constant="40" id="kGA-cB-KH6"/>
+                            <constraint firstItem="TvI-8U-Bbs" firstAttribute="top" secondItem="sXb-Qc-QkY" secondAttribute="bottom" constant="40" id="s7r-aM-tii"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bonusNumber" destination="Sx2-IJ-8fG" id="nvo-hs-VCD"/>
                         <outlet property="dateLabel" destination="4kT-4U-2iD" id="bn8-rt-1qg"/>
+                        <outlet property="firstWinamnt" destination="TvI-8U-Bbs" id="hKl-6b-vRQ"/>
                         <outlet property="image" destination="qhz-j5-xS5" id="KgY-QS-077"/>
                         <outlet property="numberLabel" destination="xXp-2z-flr" id="4LR-kJ-0DM"/>
                         <outlet property="winnerNumber" destination="83i-YP-kiq" id="tol-AP-AlJ"/>
