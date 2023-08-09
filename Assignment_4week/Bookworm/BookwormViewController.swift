@@ -33,13 +33,18 @@ class BookwormViewController: UIViewController {
     
     func configureCollectionViewlayout() {
         let layout = UICollectionViewFlowLayout()
+        let spacing: CGFloat = 12
+        let width = UIScreen.main.bounds.width - (spacing * 4)
         layout.scrollDirection = .vertical  //.horizontal: 수평, .vertical: 수직
-        layout.itemSize = CGSize(width: 120, height: 160) // 셀사이즈
+        layout.itemSize = CGSize(width: width / 3, height: 160) // 셀사이즈
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10) // CollectionView의 상하좌우 여백
         layout.minimumLineSpacing = 20
 
         collectionView.collectionViewLayout = layout
     }
+ 
+    
+    
     
     func callRequest(query: String, page: Int) {
         let text = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
@@ -50,11 +55,11 @@ class BookwormViewController: UIViewController {
             case .success(let value):
                 let json = JSON(value)
                 //print("JSON: \(json)")
-                let statusCode = response.response?.statusCode ?? 500
+                let statusCode = response.response?.statusCode ?? 500 //statusCode가 안온다면 500번을 띄워라
                 
                 if statusCode == 200 {
                     
-                    self.isEnd = json["meta"]["is_end"].boolValue
+                    self.isEnd = json["meta"]["is_end"].boolValue //대부분 false이지만 true로 바뀌는 시점알아야됨 (page수 관련)
                     
                     for item in json["documents"].arrayValue {
                         let title = item["title"].stringValue
@@ -93,7 +98,6 @@ extension BookwormViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookwormCollectionViewCell.identifier, for: indexPath) as? BookwormCollectionViewCell else { return UICollectionViewCell()}
         
-        cell.backgroundColor = .lightGray
         cell.bookTitle.text = bookList[indexPath.item].title
         cell.bookAuthor.text = bookList[indexPath.item].author
         if let url = URL(string: bookList[indexPath.item].cover) {
