@@ -60,7 +60,7 @@
                 <outlet property="bookImage" destination="Yvu-Pe-IRt" id="y4e-mx-HGM"/>
                 <outlet property="bookTitle" destination="Gdd-7e-7zF" id="iuz-F5-RWq"/>
             </connections>
-            <point key="canvasLocation" x="43" y="-28"/>
+            <point key="canvasLocation" x="27" y="-42"/>
         </collectionViewCell>
     </objects>
 </document>

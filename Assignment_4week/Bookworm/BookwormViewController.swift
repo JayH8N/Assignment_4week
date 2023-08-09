@@ -15,7 +15,8 @@ class BookwormViewController: UIViewController {
     static let identifier = "BookwormViewController"
     
     var bookList: [BookData] = []
-    
+    var page = 1
+    var isEnd = false
     
     @IBOutlet var searchBar: UISearchBar!
     
@@ -25,7 +26,7 @@ class BookwormViewController: UIViewController {
         registerNib()
         collectionView.dataSource = self
         collectionView.delegate = self
-        //callRequest(query: "아이유")
+        collectionView.prefetchDataSource = self
         configureCollectionViewlayout()
         searchBar.delegate = self
     }
@@ -40,28 +41,37 @@ class BookwormViewController: UIViewController {
         collectionView.collectionViewLayout = layout
     }
     
-    func callRequest(query: String) {
+    func callRequest(query: String, page: Int) {
         let text = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        let url = "https://dapi.kakao.com/v3/search/book?query=\(text)"
+        let url = "https://dapi.kakao.com/v3/search/book?query=\(text)&size=30&page=\(page)"
         let header: HTTPHeaders = ["Authorization": "KakaoAK \(APIKey.kakakoBook.rawValue)"]
-        AF.request(url, method: .get, headers: header).validate().responseJSON { response in
+        AF.request(url, method: .get, headers: header).validate(statusCode: 200...500).responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
                 //print("JSON: \(json)")
+                let statusCode = response.response?.statusCode ?? 500
                 
-                
-                for item in json["documents"].arrayValue {
-                    let title = item["title"].stringValue
-                    let author = item["authors"][0].stringValue
-                    let cover = item["thumbnail"].stringValue
+                if statusCode == 200 {
                     
+                    self.isEnd = json["meta"]["is_end"].boolValue
                     
-                    let data = BookData(title: title, author: author, cover: cover)
-                    self.bookList.append(data)
+                    for item in json["documents"].arrayValue {
+                        let title = item["title"].stringValue
+                        let author = item["authors"][0].stringValue
+                        let cover = item["thumbnail"].stringValue
+                        
+                        
+                        let data = BookData(title: title, author: author, cover: cover)
+                        self.bookList.append(data)
+                    }
+                    
+                    self.collectionView.reloadData()
+                    print(self.bookList)
+                    
+                } else {
+                    print("문제가 발생했어요. 잠시 후 다시 시도해주세요!")
                 }
-                
-                print(self.bookList)
                 
             case .failure(let error):
                 print(error)
@@ -73,8 +83,6 @@ class BookwormViewController: UIViewController {
         let nibName = UINib(nibName: BookwormCollectionViewCell.identifier, bundle: nil)
         collectionView.register(nibName, forCellWithReuseIdentifier: BookwormCollectionViewCell.identifier)
     }
-    
-
 }
 
 extension BookwormViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -93,17 +101,31 @@ extension BookwormViewController: UICollectionViewDelegate, UICollectionViewData
         }
         return cell
     }
-
-
 }
 
 extension BookwormViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
-        //page = 1 //검색시 마다 page를 1로 초기화 해야된다., 새로운 검색어이기 때문에 page를 1로 변경
+        page = 1
         bookList.removeAll()
         
         guard let query = searchBar.text else { return }
-        callRequest(query: query)
+        callRequest(query: query, page: page)
     }
+}
+
+extension BookwormViewController: UICollectionViewDataSourcePrefetching {
+    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+        for indexPath in indexPaths {
+            if bookList.count - 1 == indexPath.row && page < 15 && !isEnd/*false라면*/ {
+                page += 1
+                callRequest(query: searchBar.text!, page: page)
+            }
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cancelPrefetchingForItemsAt indexPaths: [IndexPath]) {
+        print("====취소: \(indexPaths)")
+    }
+    
 }
