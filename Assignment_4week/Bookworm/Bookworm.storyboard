@@ -49,10 +49,13 @@
                             <constraint firstItem="hY2-hf-6Ms" firstAttribute="trailing" secondItem="8Ep-DL-TWi" secondAttribute="trailing" id="vW7-DG-e0T"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="8Ep-DL-TWi" id="Dax-Qg-2qS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DcJ-Zl-QVX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2095.419847328244" y="89.436619718309871"/>
+            <point key="canvasLocation" x="-2089" y="-62"/>
         </scene>
     </scenes>
     <resources>

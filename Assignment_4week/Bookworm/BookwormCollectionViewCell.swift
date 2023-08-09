@@ -11,6 +11,7 @@ class BookwormCollectionViewCell: UICollectionViewCell {
 
     static let identifier = "BookwormCollectionViewCell"
     
+    
     @IBOutlet var bookTitle: UILabel!
     @IBOutlet var bookAuthor: UILabel!
     @IBOutlet var likeButton: UIButton!

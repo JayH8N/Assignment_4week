@@ -26,6 +26,8 @@
 		787877322A8366AA00DE8D7C /* BookwormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787877312A8366AA00DE8D7C /* BookwormViewController.swift */; };
 		787877352A83694200DE8D7C /* BookwormCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787877332A83694200DE8D7C /* BookwormCollectionViewCell.swift */; };
 		787877362A83694200DE8D7C /* BookwormCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 787877342A83694200DE8D7C /* BookwormCollectionViewCell.xib */; };
+		787877382A8370DC00DE8D7C /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787877372A8370DC00DE8D7C /* Struct.swift */; };
+		7878773A2A837B4600DE8D7C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 787877392A837B4600DE8D7C /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		787877312A8366AA00DE8D7C /* BookwormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormViewController.swift; sourceTree = "<group>"; };
 		787877332A83694200DE8D7C /* BookwormCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormCollectionViewCell.swift; sourceTree = "<group>"; };
 		787877342A83694200DE8D7C /* BookwormCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookwormCollectionViewCell.xib; sourceTree = "<group>"; };
+		787877372A8370DC00DE8D7C /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
+		787877392A837B4600DE8D7C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 				7878770A2A820ABD00DE8D7C /* LaunchScreen.storyboard */,
 				7878770D2A820ABD00DE8D7C /* Info.plist */,
 				787877212A82132D00DE8D7C /* Extension.swift */,
+				787877392A837B4600DE8D7C /* .gitignore */,
 			);
 			path = Assignment_4week;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 				787877312A8366AA00DE8D7C /* BookwormViewController.swift */,
 				787877332A83694200DE8D7C /* BookwormCollectionViewCell.swift */,
 				787877342A83694200DE8D7C /* BookwormCollectionViewCell.xib */,
+				787877372A8370DC00DE8D7C /* Struct.swift */,
 			);
 			path = Bookworm;
 			sourceTree = "<group>";
@@ -195,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7878773A2A837B4600DE8D7C /* .gitignore in Resources */,
 				7878772E2A83649300DE8D7C /* Bookworm.storyboard in Resources */,
 				787877362A83694200DE8D7C /* BookwormCollectionViewCell.xib in Resources */,
 				787877152A820B3C00DE8D7C /* Lottery.storyboard in Resources */,
@@ -217,6 +224,7 @@
 				787877352A83694200DE8D7C /* BookwormCollectionViewCell.swift in Sources */,
 				787877272A82264700DE8D7C /* BeerViewController.swift in Sources */,
 				787877292A8251D400DE8D7C /* RandomViewController.swift in Sources */,
+				787877382A8370DC00DE8D7C /* Struct.swift in Sources */,
 				787877172A820B4700DE8D7C /* LottoViewController.swift in Sources */,
 				787877002A820ABC00DE8D7C /* AppDelegate.swift in Sources */,
 				787877322A8366AA00DE8D7C /* BookwormViewController.swift in Sources */,
