@@ -24,6 +24,8 @@
 		787877292A8251D400DE8D7C /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787877282A8251D400DE8D7C /* RandomViewController.swift */; };
 		7878772E2A83649300DE8D7C /* Bookworm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7878772D2A83649300DE8D7C /* Bookworm.storyboard */; };
 		787877322A8366AA00DE8D7C /* BookwormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787877312A8366AA00DE8D7C /* BookwormViewController.swift */; };
+		787877352A83694200DE8D7C /* BookwormCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787877332A83694200DE8D7C /* BookwormCollectionViewCell.swift */; };
+		787877362A83694200DE8D7C /* BookwormCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 787877342A83694200DE8D7C /* BookwormCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		787877282A8251D400DE8D7C /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
 		7878772D2A83649300DE8D7C /* Bookworm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bookworm.storyboard; sourceTree = "<group>"; };
 		787877312A8366AA00DE8D7C /* BookwormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormViewController.swift; sourceTree = "<group>"; };
+		787877332A83694200DE8D7C /* BookwormCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormCollectionViewCell.swift; sourceTree = "<group>"; };
+		787877342A83694200DE8D7C /* BookwormCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookwormCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,8 @@
 			children = (
 				7878772D2A83649300DE8D7C /* Bookworm.storyboard */,
 				787877312A8366AA00DE8D7C /* BookwormViewController.swift */,
+				787877332A83694200DE8D7C /* BookwormCollectionViewCell.swift */,
+				787877342A83694200DE8D7C /* BookwormCollectionViewCell.xib */,
 			);
 			path = Bookworm;
 			sourceTree = "<group>";
@@ -190,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7878772E2A83649300DE8D7C /* Bookworm.storyboard in Resources */,
+				787877362A83694200DE8D7C /* BookwormCollectionViewCell.xib in Resources */,
 				787877152A820B3C00DE8D7C /* Lottery.storyboard in Resources */,
 				787877252A82263D00DE8D7C /* Beer.storyboard in Resources */,
 				7878770C2A820ABD00DE8D7C /* LaunchScreen.storyboard in Resources */,
@@ -207,6 +214,7 @@
 			files = (
 				787877222A82132E00DE8D7C /* Extension.swift in Sources */,
 				787877042A820ABC00DE8D7C /* ViewController.swift in Sources */,
+				787877352A83694200DE8D7C /* BookwormCollectionViewCell.swift in Sources */,
 				787877272A82264700DE8D7C /* BeerViewController.swift in Sources */,
 				787877292A8251D400DE8D7C /* RandomViewController.swift in Sources */,
 				787877172A820B4700DE8D7C /* LottoViewController.swift in Sources */,
