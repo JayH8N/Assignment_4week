@@ -13,11 +13,17 @@ class RandomViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationController?.navigationBar.tintColor = .systemPink
+        getRandomColor1()
+        
     }
-    
+    func getRandomColor1() {
 
+        UIView.animate(withDuration: 1, delay: 0.0, options:[.repeat, .autoreverse], animations: {
+            self.view.backgroundColor = UIColor(red: 255, green: 0, blue: 0, alpha: 1)
+        }, completion:nil)
+    }
     
 
 }

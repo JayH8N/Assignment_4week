@@ -29,6 +29,7 @@ class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         super.viewDidLoad()
         setTitle()
         setMain()
+        heavenButton()
         callRequest(number: last)
         numberLabel.text = "\(last)회"
         
@@ -37,6 +38,10 @@ class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         pickerView.delegate = self
         pickerView.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+            setTitle()
     }
     
     func callRequest(number: Int) {
@@ -79,6 +84,21 @@ class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: getRandomColor()]
     }
     
+    func heavenButton() {
+        let heaven = UIImage(systemName: "wand.and.stars")
+        navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: heaven, style: .plain, target: self, action: #selector(heavenButtonClicked))
+        navigationItem.rightBarButtonItem?.tintColor = .systemPink
+    }
+    
+    @objc
+    func heavenButtonClicked(_ sender: UIBarButtonItem) {
+        let sb = UIStoryboard(name: "Lottery", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: RandomViewController.identifier) as! RandomViewController
+        
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     
     //돈단위 함수
     func decimalWon(value: Int) -> String{
@@ -99,17 +119,6 @@ class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             
             return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
         }
-    
-    func getRandomColor1() {
-        let red   = CGFloat((arc4random() % 256)) / 255.0
-        let green = CGFloat((arc4random() % 256)) / 255.0
-        let blue  = CGFloat((arc4random() % 256)) / 255.0
-        let alpha = CGFloat(1.0)
-
-        UIView.animate(withDuration: 1.0, delay: 0.0, options:[.repeat, .autoreverse], animations: {
-            self.view.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: alpha)
-        }, completion:nil)
-    }
 
     
     func setMain() {

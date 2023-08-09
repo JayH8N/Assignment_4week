@@ -22,6 +22,8 @@
 		787877252A82263D00DE8D7C /* Beer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787877242A82263D00DE8D7C /* Beer.storyboard */; };
 		787877272A82264700DE8D7C /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787877262A82264700DE8D7C /* BeerViewController.swift */; };
 		787877292A8251D400DE8D7C /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787877282A8251D400DE8D7C /* RandomViewController.swift */; };
+		7878772E2A83649300DE8D7C /* Bookworm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7878772D2A83649300DE8D7C /* Bookworm.storyboard */; };
+		787877322A8366AA00DE8D7C /* BookwormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787877312A8366AA00DE8D7C /* BookwormViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		787877242A82263D00DE8D7C /* Beer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Beer.storyboard; sourceTree = "<group>"; };
 		787877262A82264700DE8D7C /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
 		787877282A8251D400DE8D7C /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
+		7878772D2A83649300DE8D7C /* Bookworm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bookworm.storyboard; sourceTree = "<group>"; };
+		787877312A8366AA00DE8D7C /* BookwormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 		787876FE2A820ABC00DE8D7C /* Assignment_4week */ = {
 			isa = PBXGroup;
 			children = (
+				7878772C2A83640700DE8D7C /* Bookworm */,
 				787877232A82261E00DE8D7C /* Beer API */,
 				787877132A820B0700DE8D7C /* Lottery API */,
 				787876FF2A820ABC00DE8D7C /* AppDelegate.swift */,
@@ -105,6 +110,15 @@
 				787877262A82264700DE8D7C /* BeerViewController.swift */,
 			);
 			path = "Beer API";
+			sourceTree = "<group>";
+		};
+		7878772C2A83640700DE8D7C /* Bookworm */ = {
+			isa = PBXGroup;
+			children = (
+				7878772D2A83649300DE8D7C /* Bookworm.storyboard */,
+				787877312A8366AA00DE8D7C /* BookwormViewController.swift */,
+			);
+			path = Bookworm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7878772E2A83649300DE8D7C /* Bookworm.storyboard in Resources */,
 				787877152A820B3C00DE8D7C /* Lottery.storyboard in Resources */,
 				787877252A82263D00DE8D7C /* Beer.storyboard in Resources */,
 				7878770C2A820ABD00DE8D7C /* LaunchScreen.storyboard in Resources */,
@@ -196,6 +211,7 @@
 				787877292A8251D400DE8D7C /* RandomViewController.swift in Sources */,
 				787877172A820B4700DE8D7C /* LottoViewController.swift in Sources */,
 				787877002A820ABC00DE8D7C /* AppDelegate.swift in Sources */,
+				787877322A8366AA00DE8D7C /* BookwormViewController.swift in Sources */,
 				787877022A820ABC00DE8D7C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
