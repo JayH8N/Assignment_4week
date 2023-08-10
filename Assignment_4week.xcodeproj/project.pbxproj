@@ -29,6 +29,8 @@
 		787877382A8370DC00DE8D7C /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787877372A8370DC00DE8D7C /* Struct.swift */; };
 		7878773A2A837B4600DE8D7C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 787877392A837B4600DE8D7C /* .gitignore */; };
 		7878773C2A837D6400DE8D7C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7878773B2A837D6400DE8D7C /* APIKey.swift */; };
+		78E5A8072A84B8CF00BE739B /* Papago.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78E5A8062A84B8CF00BE739B /* Papago.storyboard */; };
+		78E5A8092A84B8F200BE739B /* PapagoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E5A8082A84B8F200BE739B /* PapagoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		787877372A8370DC00DE8D7C /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
 		787877392A837B4600DE8D7C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		7878773B2A837D6400DE8D7C /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		78E5A8062A84B8CF00BE739B /* Papago.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Papago.storyboard; sourceTree = "<group>"; };
+		78E5A8082A84B8F200BE739B /* PapagoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PapagoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 		787876FE2A820ABC00DE8D7C /* Assignment_4week */ = {
 			isa = PBXGroup;
 			children = (
+				78E5A8052A84B8B000BE739B /* Papago API */,
 				7878772C2A83640700DE8D7C /* Bookworm */,
 				787877232A82261E00DE8D7C /* Beer API */,
 				787877132A820B0700DE8D7C /* Lottery API */,
@@ -134,6 +139,15 @@
 				787877372A8370DC00DE8D7C /* Struct.swift */,
 			);
 			path = Bookworm;
+			sourceTree = "<group>";
+		};
+		78E5A8052A84B8B000BE739B /* Papago API */ = {
+			isa = PBXGroup;
+			children = (
+				78E5A8062A84B8CF00BE739B /* Papago.storyboard */,
+				78E5A8082A84B8F200BE739B /* PapagoViewController.swift */,
+			);
+			path = "Papago API";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +223,7 @@
 				787877362A83694200DE8D7C /* BookwormCollectionViewCell.xib in Resources */,
 				787877152A820B3C00DE8D7C /* Lottery.storyboard in Resources */,
 				787877252A82263D00DE8D7C /* Beer.storyboard in Resources */,
+				78E5A8072A84B8CF00BE739B /* Papago.storyboard in Resources */,
 				7878770C2A820ABD00DE8D7C /* LaunchScreen.storyboard in Resources */,
 				787877092A820ABD00DE8D7C /* Assets.xcassets in Resources */,
 				787877072A820ABC00DE8D7C /* Main.storyboard in Resources */,
@@ -222,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78E5A8092A84B8F200BE739B /* PapagoViewController.swift in Sources */,
 				787877222A82132E00DE8D7C /* Extension.swift in Sources */,
 				787877042A820ABC00DE8D7C /* ViewController.swift in Sources */,
 				787877352A83694200DE8D7C /* BookwormCollectionViewCell.swift in Sources */,
