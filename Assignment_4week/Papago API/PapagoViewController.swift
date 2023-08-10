@@ -11,7 +11,7 @@ import Alamofire
 
 class PapagoViewController: UIViewController {
     
-    let targets = ["en", "ja", "zh-CN", "zh-TW", "vi", "id", "th", "de", "ru", "es", "it", "fr"]
+    let targets = ["언어", "en", "ja", "zh-CN", "zh-TW", "vi", "id", "th", "de", "ru", "es", "it", "fr"]
     var target = "en"
     
     @IBOutlet var sourceLan: UITextField!
@@ -53,19 +53,23 @@ class PapagoViewController: UIViewController {
         sourceLan.borderStyle = .none
         sourceLan.text = "Kor"
         sourceLan.backgroundColor = .white
+        sourceLan.textColor = .blue
         targetLan.font = .boldSystemFont(ofSize: 15)
         targetLan.textAlignment = .center
         targetLan.borderStyle = .none
         targetLan.text = "선택해주세요"
         targetLan.backgroundColor = .white
+        targetLan.textColor = .blue
         sourceTextView.layer.cornerRadius = 10
         sourceTextView.layer.borderColor = UIColor.black.cgColor
         sourceTextView.layer.borderWidth = 3
-        sourceTextView.font = .boldSystemFont(ofSize: 30)
+        sourceTextView.font = .boldSystemFont(ofSize: 20)
+        sourceTextView.textAlignment = .center
         targetTextView.layer.cornerRadius = 10
         targetTextView.layer.borderColor = UIColor.black.cgColor
         targetTextView.layer.borderWidth = 3
-        targetTextView.font = .boldSystemFont(ofSize: 30)
+        targetTextView.font = .boldSystemFont(ofSize: 20)
+        targetTextView.textAlignment = .center
     }
     
     func setButton(title: String, image: String) {
@@ -108,7 +112,7 @@ class PapagoViewController: UIViewController {
                     let data = json["message"]["result"]["translatedText"].stringValue
                     self.targetTextView.text = data
                 } else {
-                    self.targetTextView.text = "언어를 선택해주세요"
+                    self.showAlertView(title: "번역할 언어를 선택 or 번역할 언어를 선택해주세요")
                 }
                 
                 
@@ -119,7 +123,16 @@ class PapagoViewController: UIViewController {
     }
     
     
-    
+    func showAlertView(title: String, message: String? = nil, handler: ((UIAlertAction) -> Void)? = nil) {
+
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "확인", style: .cancel, handler: handler)
+
+        alert.addAction(ok)
+
+        present(alert, animated: true, completion: nil)
+    }
     
     
 }
@@ -150,7 +163,7 @@ extension PapagoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             case "es": return "스페인어"
             case "it": return "이탈리아어"
             case "fr": return "프랑스어"
-            default: break
+            default: return "번역언어"
             }
             return ""
         }
@@ -173,7 +186,7 @@ extension PapagoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             case "es": return "스페인어"
             case "it": return "이탈리아어"
             case "fr": return "프랑스어"
-            default: break
+            default: return "번역언어"
             }
             return ""
         }
