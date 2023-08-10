@@ -68,7 +68,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SCS-mH-17G">
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SCS-mH-17G">
                                         <rect key="frame" x="23" y="14" width="80" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="clT-ok-13C"/>
@@ -123,7 +123,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="551.90839694656484" y="35.211267605633807"/>
+            <point key="canvasLocation" x="671" y="35"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wDn-eH-Xx9">
