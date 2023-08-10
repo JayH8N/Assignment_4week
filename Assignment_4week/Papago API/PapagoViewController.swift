@@ -96,14 +96,21 @@ class PapagoViewController: UIViewController {
             "target": target,
             "text": sourceTextView.text ?? ""
         ]
-        AF.request(url, method: .post, parameters: parameters  ,headers: headers).validate().responseJSON { response in
+        AF.request(url, method: .post, parameters: parameters  ,headers: headers).validate(statusCode: 200...500).responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
                 print("JSON: \(json)")
                 
-                let data = json["message"]["result"]["translatedText"].stringValue
-                self.targetTextView.text = data
+                let statusCode = response.response?.statusCode ?? 500
+                
+                if statusCode == 200 {
+                    let data = json["message"]["result"]["translatedText"].stringValue
+                    self.targetTextView.text = data
+                } else {
+                    self.targetTextView.text = "언어를 선택해주세요"
+                }
+                
                 
             case .failure(let error):
                 print(error)
