@@ -40,9 +40,14 @@ class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         pickerView.dataSource = self
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-            setTitle()
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//            setTitle()
+//    }
+    
+    override func awakeAfter(using coder: NSCoder) -> Any? {
+            navigationItem.backButtonDisplayMode = .minimal
+            return super.awakeAfter(using: coder)
+        }
     
     func callRequest(number: Int) {
         let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(number)"
