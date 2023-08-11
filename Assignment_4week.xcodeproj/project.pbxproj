@@ -29,8 +29,6 @@
 		787877382A8370DC00DE8D7C /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787877372A8370DC00DE8D7C /* Struct.swift */; };
 		7878773A2A837B4600DE8D7C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 787877392A837B4600DE8D7C /* .gitignore */; };
 		7878773C2A837D6400DE8D7C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7878773B2A837D6400DE8D7C /* APIKey.swift */; };
-		78BE4F3E2A86171F00208D29 /* Tmdb.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78BE4F3D2A86171F00208D29 /* Tmdb.storyboard */; };
-		78BE4F402A86172E00208D29 /* TmdbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BE4F3F2A86172E00208D29 /* TmdbViewController.swift */; };
 		78E5A8072A84B8CF00BE739B /* Papago.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78E5A8062A84B8CF00BE739B /* Papago.storyboard */; };
 		78E5A8092A84B8F200BE739B /* PapagoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E5A8082A84B8F200BE739B /* PapagoViewController.swift */; };
 /* End PBXBuildFile section */
@@ -57,8 +55,6 @@
 		787877372A8370DC00DE8D7C /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
 		787877392A837B4600DE8D7C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		7878773B2A837D6400DE8D7C /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
-		78BE4F3D2A86171F00208D29 /* Tmdb.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tmdb.storyboard; sourceTree = "<group>"; };
-		78BE4F3F2A86172E00208D29 /* TmdbViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmdbViewController.swift; sourceTree = "<group>"; };
 		78E5A8062A84B8CF00BE739B /* Papago.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Papago.storyboard; sourceTree = "<group>"; };
 		78E5A8082A84B8F200BE739B /* PapagoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PapagoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,7 +92,6 @@
 		787876FE2A820ABC00DE8D7C /* Assignment_4week */ = {
 			isa = PBXGroup;
 			children = (
-				78BE4F3C2A86170400208D29 /* TMDB API */,
 				78E5A8052A84B8B000BE739B /* Papago API */,
 				7878772C2A83640700DE8D7C /* Bookworm */,
 				787877232A82261E00DE8D7C /* Beer API */,
@@ -144,15 +139,6 @@
 				787877372A8370DC00DE8D7C /* Struct.swift */,
 			);
 			path = Bookworm;
-			sourceTree = "<group>";
-		};
-		78BE4F3C2A86170400208D29 /* TMDB API */ = {
-			isa = PBXGroup;
-			children = (
-				78BE4F3D2A86171F00208D29 /* Tmdb.storyboard */,
-				78BE4F3F2A86172E00208D29 /* TmdbViewController.swift */,
-			);
-			path = "TMDB API";
 			sourceTree = "<group>";
 		};
 		78E5A8052A84B8B000BE739B /* Papago API */ = {
@@ -235,7 +221,6 @@
 				7878773A2A837B4600DE8D7C /* .gitignore in Resources */,
 				7878772E2A83649300DE8D7C /* Bookworm.storyboard in Resources */,
 				787877362A83694200DE8D7C /* BookwormCollectionViewCell.xib in Resources */,
-				78BE4F3E2A86171F00208D29 /* Tmdb.storyboard in Resources */,
 				787877152A820B3C00DE8D7C /* Lottery.storyboard in Resources */,
 				787877252A82263D00DE8D7C /* Beer.storyboard in Resources */,
 				78E5A8072A84B8CF00BE739B /* Papago.storyboard in Resources */,
@@ -257,7 +242,6 @@
 				787877042A820ABC00DE8D7C /* ViewController.swift in Sources */,
 				787877352A83694200DE8D7C /* BookwormCollectionViewCell.swift in Sources */,
 				787877272A82264700DE8D7C /* BeerViewController.swift in Sources */,
-				78BE4F402A86172E00208D29 /* TmdbViewController.swift in Sources */,
 				787877292A8251D400DE8D7C /* RandomViewController.swift in Sources */,
 				787877382A8370DC00DE8D7C /* Struct.swift in Sources */,
 				7878773C2A837D6400DE8D7C /* APIKey.swift in Sources */,
