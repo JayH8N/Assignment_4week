@@ -16,13 +16,13 @@ class APIManager {
     
     private init() {}
     
-    func callRequest(number: Int, completionHandler: ) {
+    func callRequest(number: Int, completionHandler: @escaping (Lotto) -> ()) {
         let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(number)"
         AF.request(url, method: .get).validate(statusCode: 200...500).responseDecodable(of: Lotto.self) { response in
                 
             guard let value = response.value else { return }
             
-            
+            completionHandler(value)
             
         }
     }

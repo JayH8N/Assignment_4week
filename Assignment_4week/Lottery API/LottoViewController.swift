@@ -187,7 +187,13 @@ class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         numberLabel.text = "\(list[row])회"
         //callRequest(number: list[row])
-        callRequest(number: list[row])
+        APIManager.shared.callRequest(number: list[row]) { value in
+            self.winnerNumber.text = "\(value.drwtNo1)  \(value.drwtNo2)   \(value.drwtNo3)   \(value.drwtNo4)   \(value.drwtNo5)   \(value.drwtNo6)"
+            self.dateLabel.text = value.drwNoDate
+            self.bonusNumber.text = "\(value.bnusNo)"
+            let money = self.decimalWon(value: Int(value.firstWinamnt))
+            self.firstWinamnt.text = "1등 당첨금: \(money)"
+        }
     }
 
 }
