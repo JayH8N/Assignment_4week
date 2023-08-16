@@ -49,39 +49,54 @@ class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             return super.awakeAfter(using: coder)
         }
     
+//    func callRequest(number: Int) {
+//        let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(number)"
+//        AF.request(url, method: .get).validate().responseJSON { response in
+//            switch response.result {
+//            case .success(let value):
+//                let json = JSON(value)
+//                //
+//                let date = json["drwNoDate"].stringValue
+//                //
+//                let bonusNumber = json["bnusNo"].intValue
+//                //
+//                let num1 = json["drwtNo1"]
+//                let num2 = json["drwtNo2"]
+//                let num3 = json["drwtNo3"]
+//                let num4 = json["drwtNo4"]
+//                let num5 = json["drwtNo5"]
+//                let num6 = json["drwtNo6"]
+//                //
+//                let firstWinamnt = json["firstWinamnt"].intValue
+//
+//                self.winnerNumber.text = "\(num1)  \(num2)  \(num3)  \(num4)  \(num5)  \(num6)"
+//                self.dateLabel.text = date
+//                self.bonusNumber.text = "\(bonusNumber)"
+//                let money = self.decimalWon(value: firstWinamnt)
+//                self.firstWinamnt.text = "1등 당첨금 : \(money)"
+//
+//
+//                print("JSON: \(json)")
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
+//    }
     func callRequest(number: Int) {
         let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(number)"
-        AF.request(url, method: .get).validate().responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                //
-                let date = json["drwNoDate"].stringValue
-                //
-                let bonusNumber = json["bnusNo"].intValue
-                //
-                let num1 = json["drwtNo1"]
-                let num2 = json["drwtNo2"]
-                let num3 = json["drwtNo3"]
-                let num4 = json["drwtNo4"]
-                let num5 = json["drwtNo5"]
-                let num6 = json["drwtNo6"]
-                //
-                let firstWinamnt = json["firstWinamnt"].intValue
+        AF.request(url, method: .get).validate(statusCode: 200...500).responseDecodable(of: Lotto.self) { response in
                 
-                self.winnerNumber.text = "\(num1)  \(num2)  \(num3)  \(num4)  \(num5)  \(num6)"
-                self.dateLabel.text = date
-                self.bonusNumber.text = "\(bonusNumber)"
-                let money = self.decimalWon(value: firstWinamnt)
-                self.firstWinamnt.text = "1등 당첨금 : \(money)"
-                
-                
-                print("JSON: \(json)")
-            case .failure(let error):
-                print(error)
-            }
+            guard let value = response.value else { return }
+            
+            self.winnerNumber.text = "\(value.drwtNo1)  \(value.drwtNo2)   \(value.drwtNo3)   \(value.drwtNo4)   \(value.drwtNo5)   \(value.drwtNo6)"
+            self.dateLabel.text = value.drwNoDate
+            self.bonusNumber.text = "\(value.bnusNo)"
+            let money = self.decimalWon(value: Int(value.firstWinamnt))
+            self.firstWinamnt.text = "1등 당첨금: \(money)"
         }
     }
+    
+    
     
     func setTitle() {
         self.title = "-----인 · 생 · 한 · 방-----"
@@ -171,11 +186,17 @@ class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
 
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         numberLabel.text = "\(list[row])회"
+        //callRequest(number: list[row])
         callRequest(number: list[row])
     }
 
-    
-    
-    
-    
+}
+
+// MARK: - Lotto
+struct Lotto: Codable {
+    let totSellamnt: Int
+    let returnValue, drwNoDate: String
+    let firstWinamnt, drwtNo6, drwtNo4, firstPrzwnerCo: Int
+    let drwtNo5, bnusNo, firstAccumamnt, drwNo: Int
+    let drwtNo2, drwtNo3, drwtNo1: Int
 }
