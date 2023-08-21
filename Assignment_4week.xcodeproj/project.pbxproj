@@ -7,15 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		787856AA2A8C955400246CE0 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787856A92A8C955400246CE0 /* APIManager.swift */; };
 		787877002A820ABC00DE8D7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787876FF2A820ABC00DE8D7C /* AppDelegate.swift */; };
 		787877022A820ABC00DE8D7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787877012A820ABC00DE8D7C /* SceneDelegate.swift */; };
 		787877042A820ABC00DE8D7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787877032A820ABC00DE8D7C /* ViewController.swift */; };
 		787877072A820ABC00DE8D7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787877052A820ABC00DE8D7C /* Main.storyboard */; };
 		787877092A820ABD00DE8D7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787877082A820ABD00DE8D7C /* Assets.xcassets */; };
 		7878770C2A820ABD00DE8D7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7878770A2A820ABD00DE8D7C /* LaunchScreen.storyboard */; };
+		787877152A820B3C00DE8D7C /* Lottery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787877142A820B3C00DE8D7C /* Lottery.storyboard */; };
+		787877172A820B4700DE8D7C /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787877162A820B4700DE8D7C /* LottoViewController.swift */; };
+		7878771A2A820E0000DE8D7C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 787877192A820E0000DE8D7C /* SwiftyJSON */; };
+		7878771D2A820E0E00DE8D7C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7878771C2A820E0E00DE8D7C /* Alamofire */; };
+		787877202A820E1900DE8D7C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7878771F2A820E1900DE8D7C /* Kingfisher */; };
+		787877222A82132E00DE8D7C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787877212A82132D00DE8D7C /* Extension.swift */; };
+		787877252A82263D00DE8D7C /* Beer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787877242A82263D00DE8D7C /* Beer.storyboard */; };
+		787877272A82264700DE8D7C /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787877262A82264700DE8D7C /* BeerViewController.swift */; };
+		787877292A8251D400DE8D7C /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787877282A8251D400DE8D7C /* RandomViewController.swift */; };
+		7878772E2A83649300DE8D7C /* Bookworm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7878772D2A83649300DE8D7C /* Bookworm.storyboard */; };
+		787877322A8366AA00DE8D7C /* BookwormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787877312A8366AA00DE8D7C /* BookwormViewController.swift */; };
+		787877352A83694200DE8D7C /* BookwormCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787877332A83694200DE8D7C /* BookwormCollectionViewCell.swift */; };
+		787877362A83694200DE8D7C /* BookwormCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 787877342A83694200DE8D7C /* BookwormCollectionViewCell.xib */; };
+		787877382A8370DC00DE8D7C /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787877372A8370DC00DE8D7C /* Struct.swift */; };
+		7878773A2A837B4600DE8D7C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 787877392A837B4600DE8D7C /* .gitignore */; };
+		7878773C2A837D6400DE8D7C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7878773B2A837D6400DE8D7C /* APIKey.swift */; };
+		78E5A8072A84B8CF00BE739B /* Papago.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78E5A8062A84B8CF00BE739B /* Papago.storyboard */; };
+		78E5A8092A84B8F200BE739B /* PapagoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E5A8082A84B8F200BE739B /* PapagoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		787856A92A8C955400246CE0 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		787876FC2A820ABC00DE8D7C /* Assignment_4week.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment_4week.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		787876FF2A820ABC00DE8D7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		787877012A820ABC00DE8D7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +44,21 @@
 		787877082A820ABD00DE8D7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7878770B2A820ABD00DE8D7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7878770D2A820ABD00DE8D7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		787877142A820B3C00DE8D7C /* Lottery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lottery.storyboard; sourceTree = "<group>"; };
+		787877162A820B4700DE8D7C /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
+		787877212A82132D00DE8D7C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		787877242A82263D00DE8D7C /* Beer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Beer.storyboard; sourceTree = "<group>"; };
+		787877262A82264700DE8D7C /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
+		787877282A8251D400DE8D7C /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
+		7878772D2A83649300DE8D7C /* Bookworm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bookworm.storyboard; sourceTree = "<group>"; };
+		787877312A8366AA00DE8D7C /* BookwormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormViewController.swift; sourceTree = "<group>"; };
+		787877332A83694200DE8D7C /* BookwormCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormCollectionViewCell.swift; sourceTree = "<group>"; };
+		787877342A83694200DE8D7C /* BookwormCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookwormCollectionViewCell.xib; sourceTree = "<group>"; };
+		787877372A8370DC00DE8D7C /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
+		787877392A837B4600DE8D7C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		7878773B2A837D6400DE8D7C /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		78E5A8062A84B8CF00BE739B /* Papago.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Papago.storyboard; sourceTree = "<group>"; };
+		78E5A8082A84B8F200BE739B /* PapagoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PapagoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +66,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				787877202A820E1900DE8D7C /* Kingfisher in Frameworks */,
+				7878771A2A820E0000DE8D7C /* SwiftyJSON in Frameworks */,
+				7878771D2A820E0E00DE8D7C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +94,10 @@
 		787876FE2A820ABC00DE8D7C /* Assignment_4week */ = {
 			isa = PBXGroup;
 			children = (
+				78E5A8052A84B8B000BE739B /* Papago API */,
+				7878772C2A83640700DE8D7C /* Bookworm */,
+				787877232A82261E00DE8D7C /* Beer API */,
+				787877132A820B0700DE8D7C /* Lottery API */,
 				787876FF2A820ABC00DE8D7C /* AppDelegate.swift */,
 				787877012A820ABC00DE8D7C /* SceneDelegate.swift */,
 				787877032A820ABC00DE8D7C /* ViewController.swift */,
@@ -63,8 +105,52 @@
 				787877082A820ABD00DE8D7C /* Assets.xcassets */,
 				7878770A2A820ABD00DE8D7C /* LaunchScreen.storyboard */,
 				7878770D2A820ABD00DE8D7C /* Info.plist */,
+				787877212A82132D00DE8D7C /* Extension.swift */,
+				787877392A837B4600DE8D7C /* .gitignore */,
+				7878773B2A837D6400DE8D7C /* APIKey.swift */,
+				787856A92A8C955400246CE0 /* APIManager.swift */,
 			);
 			path = Assignment_4week;
+			sourceTree = "<group>";
+		};
+		787877132A820B0700DE8D7C /* Lottery API */ = {
+			isa = PBXGroup;
+			children = (
+				787877142A820B3C00DE8D7C /* Lottery.storyboard */,
+				787877162A820B4700DE8D7C /* LottoViewController.swift */,
+				787877282A8251D400DE8D7C /* RandomViewController.swift */,
+			);
+			path = "Lottery API";
+			sourceTree = "<group>";
+		};
+		787877232A82261E00DE8D7C /* Beer API */ = {
+			isa = PBXGroup;
+			children = (
+				787877242A82263D00DE8D7C /* Beer.storyboard */,
+				787877262A82264700DE8D7C /* BeerViewController.swift */,
+			);
+			path = "Beer API";
+			sourceTree = "<group>";
+		};
+		7878772C2A83640700DE8D7C /* Bookworm */ = {
+			isa = PBXGroup;
+			children = (
+				7878772D2A83649300DE8D7C /* Bookworm.storyboard */,
+				787877312A8366AA00DE8D7C /* BookwormViewController.swift */,
+				787877332A83694200DE8D7C /* BookwormCollectionViewCell.swift */,
+				787877342A83694200DE8D7C /* BookwormCollectionViewCell.xib */,
+				787877372A8370DC00DE8D7C /* Struct.swift */,
+			);
+			path = Bookworm;
+			sourceTree = "<group>";
+		};
+		78E5A8052A84B8B000BE739B /* Papago API */ = {
+			isa = PBXGroup;
+			children = (
+				78E5A8062A84B8CF00BE739B /* Papago.storyboard */,
+				78E5A8082A84B8F200BE739B /* PapagoViewController.swift */,
+			);
+			path = "Papago API";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +169,11 @@
 			dependencies = (
 			);
 			name = Assignment_4week;
+			packageProductDependencies = (
+				787877192A820E0000DE8D7C /* SwiftyJSON */,
+				7878771C2A820E0E00DE8D7C /* Alamofire */,
+				7878771F2A820E1900DE8D7C /* Kingfisher */,
+			);
 			productName = Assignment_4week;
 			productReference = 787876FC2A820ABC00DE8D7C /* Assignment_4week.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +202,11 @@
 				Base,
 			);
 			mainGroup = 787876F32A820ABC00DE8D7C;
+			packageReferences = (
+				787877182A820E0000DE8D7C /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				7878771B2A820E0E00DE8D7C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				7878771E2A820E1900DE8D7C /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 787876FD2A820ABC00DE8D7C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +221,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7878773A2A837B4600DE8D7C /* .gitignore in Resources */,
+				7878772E2A83649300DE8D7C /* Bookworm.storyboard in Resources */,
+				787877362A83694200DE8D7C /* BookwormCollectionViewCell.xib in Resources */,
+				787877152A820B3C00DE8D7C /* Lottery.storyboard in Resources */,
+				787877252A82263D00DE8D7C /* Beer.storyboard in Resources */,
+				78E5A8072A84B8CF00BE739B /* Papago.storyboard in Resources */,
 				7878770C2A820ABD00DE8D7C /* LaunchScreen.storyboard in Resources */,
 				787877092A820ABD00DE8D7C /* Assets.xcassets in Resources */,
 				787877072A820ABC00DE8D7C /* Main.storyboard in Resources */,
@@ -138,8 +240,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78E5A8092A84B8F200BE739B /* PapagoViewController.swift in Sources */,
+				787877222A82132E00DE8D7C /* Extension.swift in Sources */,
 				787877042A820ABC00DE8D7C /* ViewController.swift in Sources */,
+				787877352A83694200DE8D7C /* BookwormCollectionViewCell.swift in Sources */,
+				787877272A82264700DE8D7C /* BeerViewController.swift in Sources */,
+				787877292A8251D400DE8D7C /* RandomViewController.swift in Sources */,
+				787877382A8370DC00DE8D7C /* Struct.swift in Sources */,
+				7878773C2A837D6400DE8D7C /* APIKey.swift in Sources */,
+				787877172A820B4700DE8D7C /* LottoViewController.swift in Sources */,
 				787877002A820ABC00DE8D7C /* AppDelegate.swift in Sources */,
+				787856AA2A8C955400246CE0 /* APIManager.swift in Sources */,
+				787877322A8366AA00DE8D7C /* BookwormViewController.swift in Sources */,
 				787877022A820ABC00DE8D7C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,8 +405,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +415,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.junghoon.Assignment-4week";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,8 +437,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +447,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.junghoon.Assignment-4week";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +478,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		787877182A820E0000DE8D7C /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		7878771B2A820E0E00DE8D7C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		7878771E2A820E1900DE8D7C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		787877192A820E0000DE8D7C /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 787877182A820E0000DE8D7C /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		7878771C2A820E0E00DE8D7C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7878771B2A820E0E00DE8D7C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		7878771F2A820E1900DE8D7C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7878771E2A820E1900DE8D7C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 787876F42A820ABC00DE8D7C /* Project object */;
 }
